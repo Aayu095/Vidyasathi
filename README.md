@@ -206,7 +206,7 @@ This project is licensed under the [MIT License](LICENSE).
 ## 📬 Contact
 
 For any queries, ideas, or collaborations, reach out at:
-📧 **[msabhishekanni10@gmail.com](mailto:msabhishekanni10@gmail.com)**
+📧 **[aayushigoel73@gmail.com](mailto:aayushigoel73@gmail.com)**
 
 ---
 
