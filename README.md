@@ -4,7 +4,10 @@
 ![Made with React](https://img.shields.io/badge/Made%20with-React-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38B2AC)
+![shadcn/ui](https://img.shields.io/badge/UI-shadcn/ui-black)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql)
+![Vite](https://img.shields.io/badge/Build-Vite-646cff?logo=vite)
 ![License MIT](https://img.shields.io/badge/License-MIT-green)
 ![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red)
 ![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen)
@@ -17,8 +20,7 @@
 
 ## 🚀 Live Demo
 
-🌐 Coming soon!  
-_(Deploy using Lovable's built-in deployment or connect to your preferred hosting platform.)_
+🔗 **Live Site**: [Visit VidyaSathi](https://vidyasathi.vercel.app/)
 
 ---
 
@@ -29,11 +31,11 @@ _(Deploy using Lovable's built-in deployment or connect to your preferred hostin
 - [Technologies Used](#-technologies-used)
 - [Installation Guide](#-installation-guide)
 - [Configuration](#-configuration)
+- [API Key Protection & Environment Setup](#-api-key-protection--environment-setup)
 - [How to Use](#-how-to-use)
 - [Contributing](#-contributing)
 - [License](#-license)
 - [Contact](#-contact)
-- [API Key Protection & Environment Setup](#-api-key-protection--environment-setup)
 
 ---
 
@@ -82,14 +84,14 @@ _(Deploy using Lovable's built-in deployment or connect to your preferred hostin
 ## 🛠️ Technologies Used
 
 - **Frontend**: React, TypeScript, Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Backend**: Supabase (Database, Authentication, Edge Functions)
+- **UI Components**: shadcn/ui, Radix UI
+- **Backend**: Supabase (Database, Authentication, Edge Functions, Real-time DB)
 - **Build Tool**: Vite
+- **AI Integration**: Google Gemini (via Supabase Edge Functions)
 - **State Management**: TanStack Query
-- **Routing**: React Router DOM
-- **Icons**: Lucide React
-- **Charts**: Recharts
-
+- **Package Manager**: Bun
+- **Deployment**: Vercel, GitHub
+  
 ---
 
 ## ⚙️ Installation Guide
@@ -148,6 +150,27 @@ _(Deploy using Lovable's built-in deployment or connect to your preferred hostin
 
 ---
 
+## 🔒 API Key Protection & Environment Setup
+
+**API keys are securely managed through Supabase!**
+
+* The chatbot uses Supabase Edge Functions to securely handle API requests
+* API keys are stored as Supabase secrets and never exposed to the frontend
+* To configure API keys:
+  1. Go to your Supabase project dashboard
+  2. Navigate to Project Settings → Secrets
+  3. Add your `GEMINI_API_KEY` secret
+  4. The Edge Functions automatically use these secrets securely
+
+* For local development with Supabase CLI:
+  ```bash
+  supabase secrets set GEMINI_API_KEY=your_api_key_here
+  ```
+
+* No `.env` files needed - Supabase handles all environment configuration!
+
+---
+
 ## ✨ How to Use
 
 * Register and create your profile
@@ -184,36 +207,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 For any queries, ideas, or collaborations, reach out at:
 📧 **[msabhishekanni10@gmail.com](mailto:msabhishekanni10@gmail.com)**
-
----
-
-## 🔒 API Key Protection & Environment Setup
-
-**API keys are securely managed through Supabase!**
-
-* The chatbot uses Supabase Edge Functions to securely handle API requests
-* API keys are stored as Supabase secrets and never exposed to the frontend
-* To configure API keys:
-  1. Go to your Supabase project dashboard
-  2. Navigate to Project Settings → Secrets
-  3. Add your `GEMINI_API_KEY` secret
-  4. The Edge Functions automatically use these secrets securely
-
-* For local development with Supabase CLI:
-  ```bash
-  supabase secrets set GEMINI_API_KEY=your_api_key_here
-  ```
-
-* No `.env` files needed - Supabase handles all environment configuration!
-
----
-
-## 🚀 Deployment
-
-* **Lovable Platform**: Use the built-in "Publish" button for instant deployment
-* **Custom Domain**: Configure in Project Settings → Domains (requires paid plan)
-* **GitHub Integration**: Connect to GitHub for automatic deployments to other platforms
-* **Self-hosting**: Deploy the built app to Vercel, Netlify, or any static hosting service
 
 ---
 
